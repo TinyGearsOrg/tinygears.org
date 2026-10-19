@@ -1,0 +1,8 @@
+baseURL = "https://www.tinygears.org/"
+locale = "en"
+title = "TinyGears"
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Small, precise open-source libraries."
+  github = "https://github.com/TinyGearsOrg"

@@ -1,0 +1,6 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<p class="lead">{{ .Params.summary }}</p>
+<p class="links">{{ range .Params.links }}<a class="button" href="{{ .url }}">{{ .name }}</a>{{ end }}</p>
+{{ .Content }}
+{{ end }}

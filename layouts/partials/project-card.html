@@ -1,0 +1,5 @@
+<article class="card">
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <p>{{ .Params.summary }}</p>
+  <p class="meta"><span class="badge">{{ .Params.status }}</span>{{ with .Params.version }} {{ . }}{{ end }}</p>
+</article>
