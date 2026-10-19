@@ -24,3 +24,22 @@ footer.wrap { color: var(--muted); border-top: 1px solid var(--line); margin-top
 .button { display: inline-block; margin: 0 .5rem .5rem 0; padding: .3rem .9rem; border: 1px solid var(--accent); border-radius: .4rem; text-decoration: none; }
 pre { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: .4rem; padding: .75rem 1rem; }
 code { font-family: ui-monospace, monospace; font-size: .9em; }
+
+/* look */
+:root { --accent2: #12a594; }
+@media (prefers-color-scheme: dark) { :root { --accent2: #3dd6c3; } }
+body { background: radial-gradient(60rem 28rem at 85% -8rem, color-mix(in srgb, var(--accent) 18%, transparent), transparent), var(--bg); }
+.hero { position: relative; padding: 3.5rem 0 1.5rem; }
+.hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); letter-spacing: -.02em; background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.gear { position: absolute; right: 0; top: 1rem; width: clamp(6rem, 22vw, 10rem); fill: var(--accent); opacity: .18; animation: spin 60s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .gear { animation: none; } }
+.lead { max-width: 38rem; }
+.card { border-top: 3px solid var(--accent); transition: transform .15s, box-shadow .15s; }
+.card:hover { transform: translateY(-3px); box-shadow: 0 .5rem 1.25rem color-mix(in srgb, var(--fg) 12%, transparent); }
+.card h3 { font-size: 1.3rem; }
+.card h3 a { text-decoration: none; }
+.card:nth-child(even) { border-top-color: var(--accent2); }
+.button { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 600; }
+.button:hover { filter: brightness(1.1); }
+h2 { margin-top: 2.5rem; }
