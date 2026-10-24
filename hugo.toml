@@ -6,3 +6,6 @@ disableKinds = ["taxonomy", "term"]
 [params]
   description = "Small, precise open-source libraries."
   github = "https://github.com/TinyGearsOrg"
+
+[markup.highlight]
+  codeFences = false
