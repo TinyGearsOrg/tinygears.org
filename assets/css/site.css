@@ -1,8 +1,8 @@
 :root {
   color-scheme: dark light;
-  --bg-0: #1a1a1a; --bg-1: #1f1f1f; --bg-2: #2f2f2f; --bg-3: #3f3f3f;
-  --fg-0: #e6e6f4; --fg-1: #c8c8d2; --fg-2: #9a9aa4;
-  --link: #8ab4ff;
+  --bg-0: #0e1116; --bg-1: #151a22; --bg-2: #1d2430; --bg-3: #2a3342;
+  --fg-0: #eef1f6; --fg-1: #c5ccd8; --fg-2: #8b95a5;
+  --link: #7db1ff;
 }
 @media (prefers-color-scheme: light) {
   :root {
