@@ -1,6 +1,17 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-<p class="lead">{{ .Params.summary }}</p>
-<p class="links">{{ range .Params.links }}<a class="button" href="{{ .url }}">{{ .name }}</a>{{ end }}</p>
-{{ .Content }}
+<div class="landing"{{ with .Params.accent }} style="--accent: {{ . }}"{{ end }}>
+  <section class="hero">
+    {{ partial "logo.html" . }}
+    <h1>{{ .Title }}</h1>
+    <p class="tagline">{{ .Params.tagline | default .Params.summary }}</p>
+    {{ with .Params.subtitle }}<p class="subtitle">{{ . }}</p>{{ end }}
+    <p class="actions">{{ range $i, $l := .Params.links }}<a class="{{ if eq $i 0 }}btn-primary{{ else }}btn-secondary{{ end }}" href="{{ $l.url }}">{{ $l.name }}</a>{{ end }}</p>
+  </section>
+  {{ with .Params.features }}
+  <section class="features">
+    {{ range . }}<div class="feature"><h3>{{ .title }}</h3><p>{{ .text | markdownify }}</p></div>{{ end }}
+  </section>
+  {{ end }}
+  <section class="prose">{{ .Content }}</section>
+</div>
 {{ end }}

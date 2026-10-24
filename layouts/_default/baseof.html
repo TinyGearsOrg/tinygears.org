@@ -9,15 +9,17 @@
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 </head>
 <body>
-  <header class="wrap">
-    <a class="brand" href="{{ "/" | relURL }}">TinyGears</a>
-    <nav>
-      <a href="{{ "/projects/" | relURL }}">Projects</a>
-      <a href="{{ "/about/" | relURL }}">About</a>
-      <a href="{{ site.Params.github }}">GitHub</a>
-    </nav>
+  <header class="app">
+    <div class="container">
+      <a class="brand" href="{{ "/" | relURL }}">{{ partial "logo.html" . }}<span>TinyGears</span></a>
+      <nav aria-label="Site links">
+        <a href="{{ "/projects/" | relURL }}">Projects</a>
+        <a href="{{ "/about/" | relURL }}">About</a>
+        <a href="{{ site.Params.github }}">GitHub</a>
+      </nav>
+    </div>
   </header>
-  <main class="wrap">{{ block "main" . }}{{ end }}</main>
-  <footer class="wrap">Apache License 2.0 &middot; <a href="{{ site.Params.github }}">TinyGearsOrg on GitHub</a></footer>
+  <main class="container">{{ block "main" . }}{{ end }}</main>
+  <footer class="container">Apache License 2.0 &middot; <a href="{{ site.Params.github }}">TinyGearsOrg on GitHub</a></footer>
 </body>
 </html>
