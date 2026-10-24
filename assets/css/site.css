@@ -1,15 +1,8 @@
 :root {
-  color-scheme: dark light;
+  color-scheme: dark;
   --bg-0: #0e1116; --bg-1: #151a22; --bg-2: #1d2430; --bg-3: #2a3342;
   --fg-0: #eef1f6; --fg-1: #c5ccd8; --fg-2: #8b95a5;
   --link: #7db1ff;
-}
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-0: #fbf1c7; --bg-1: #f2e5bc; --bg-2: #e0d2a8; --bg-3: #c9b98e;
-    --fg-0: #111216; --fg-1: #3c3836; --fg-2: #665c54;
-    --link: #1f5fbf;
-  }
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg-0); color: var(--fg-1); font: 1.0625rem/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
